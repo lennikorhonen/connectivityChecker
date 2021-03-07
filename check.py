@@ -16,12 +16,12 @@ def check_connection():
     print(read_file())
     check = read_file()
 
-    for site in check:
-        if urllib.request.urlopen(site).getcode() == 200:
-            print(site, ':', urllib.request.urlopen(site).getcode())
-        else:
-            print(site, ': Not up, error code:',
-                  urllib.request.urlopen(site).getcode())
+    try:
+        for site in check:
+            print(site, "status code:", urllib.request.urlopen(site).getcode())
+    except urllib.error.URLError as e:
+        print(site, "error reason:", e.reason)
+
 
 
 def read_file():
