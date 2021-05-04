@@ -22,7 +22,7 @@ For eg: github.com
 
 ### TODO:
 
-- [ ] Add requirements.txt and guide how to get this version up and running
+- [X] Add requirements.txt and guide how to get this version up and running
 - [ ] Add connection timeout if site can't be reached in a certain amount of time
 - [ ] Make a Flask app from this
 - [ ] Dockerize the future Flask app
